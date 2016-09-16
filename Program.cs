@@ -15,7 +15,7 @@ namespace EJE7
 			Console.Write("INGRESE EL NOMBRE EL FICHERO : ");
 			string nombre = Console.ReadLine();
 			//aqui le quiero pasar la ruta
-			nombre="A:\"+nombre;
+			nombre="A:\\"+nombre+".txt";
 			CListaArt LA= new CListaArt(nombre,resp);
 			//controlar que "resp" este en mayuscula
 			if (resp=='S'){
@@ -27,6 +27,7 @@ namespace EJE7
 			Console.WriteLine("5. Salir");
 			Console.Write("Opcion : ");
 			opcion = int.Parse(Console.ReadLine());
+			if (opcion==1) LA.Alta(nombre);
 			//switch
 			}
 		 Console.ReadKey(true);
