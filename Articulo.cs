@@ -70,10 +70,10 @@ namespace EJE7
 			get{return Stock;}
 			set{Stock=value;}
 		}
-		public int Tamaño
-		{
-			get{ return codigo.Length*2+Nombre.Length*2+marca.Length*2+Nom_Proveedor.Length*2+Precio_Min.Length*2+Precio_May.Length*2+Stock.Length*2+8;}
-		}
+//		public int Tamaño
+//		{
+//			get{ return codigo.Length*2+Nombre.Length*2+marca.Length*2+Nom_Proveedor.Length*2+Precio_Min.Length*2+Precio_May.Length*2+Stock.Length*2+8;}
+//		}
 		
 }
 }

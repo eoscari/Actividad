@@ -12,10 +12,29 @@ using System.IO;
 namespace EJE7
 {
 	public class CListaArt
-	{
-		public CListaArt()
+	{//ATRIBUTOS
+		private FileStream fs;  
+//		private StreamReader sr;
+//		private StreamWriter sw;
+//		private BinaryReader br;
+//		private BinaryWriter bw;
+//		private int nregs;
+//		private bool regsEliminado=false;
+//		private bool regsModificado=false;
+		
+		//CONSTRUCTOR
+		public CListaArt(string fichero, char respuesta)
 		{ 
-		 
+		    respuesta ='S';
+			if (File.Exists(fichero))
+			{
+				Console.Write("El fichero Existe desea trabajar en el ? (S/N): ");
+				respuesta=char.Parse(Console.ReadLine());}
+		 	else {fs= new FileStream(fichero, FileMode.CreateNew, FileAccess.ReadWrite);}
+		}
+		
+		public void Alta() {
+		   
 		}
 	}
 }
