@@ -16,7 +16,7 @@ namespace EJE7
 		{
 			Console.WriteLine("HOLA GENTE!");
 			
-			
+			//Ahora si estamos bien!!
 			Console.Write("Seguir programando . . . ");
 			Console.ReadKey(true);
 		}
