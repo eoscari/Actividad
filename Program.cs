@@ -8,14 +8,15 @@ namespace EJE7
 		public static void Main(string[] args)
 		{ 
 			int opcion = 0;
-		char resp='S';
+			char resp='S';
+			
 			
 			Console.Title= "Trabajando con Ficheros";
 			Console.ForegroundColor = ConsoleColor.DarkGreen;
 			Console.Write("INGRESE EL NOMBRE EL FICHERO : ");
 			string nombre = Console.ReadLine();
 			//aqui le quiero pasar la ruta
-			nombre="A:\"+nombre;
+			nombre="C:\\"+nombre+".txt";
 			CListaArt LA= new CListaArt(nombre,resp);
 			//controlar que "resp" este en mayuscula
 			if (resp=='S'){
