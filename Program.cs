@@ -15,7 +15,7 @@ namespace EJE7
 		public static void Main(string[] args)
 		{
 			Console.WriteLine("HOLA GENTE!");
-			
+			//Hola a todos lala!!
 			//Ahora si estamos bien!!
 			Console.Write("Seguir programando . . . ");
 			Console.ReadKey(true);
