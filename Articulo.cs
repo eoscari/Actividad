@@ -18,12 +18,12 @@ namespace EJE7
 		private String Nombre;
 		private String marca;	
 		private String Nom_Proveedor;
-		private Double Precio_Min;
-		private Double Precio_May;
-		private integer Stock;
+		private String Precio_Min;
+		private String Precio_May;
+		private string Stock;
 		
 		//CONSTRUCTOR
-		public Articulo(String cod, String nom, String mar, String NP,Double PMin, Double PMay,integer cant)
+		public Articulo(String cod, String nom, String mar, String NP,String PMin, String PMay,string cant)
 		{	
 			this.codigo = cod;
 			this.Nombre = nom;
@@ -55,20 +55,24 @@ namespace EJE7
 			get{return Nom_Proveedor;}
 			set{Nom_Proveedor=value;}
 		}
-		public Double SGMinorista
+		public String SGMinorista
 		{
 			get{return Precio_Min;}
 			set{Precio_Min=value;}
 		}
-		public Double SGMayorista
+		public String SGMayorista
 		{
 			get{return Precio_May;}
 			set{Precio_May=value;}
 		}
-		public integer SGStock
+		public String SGStock
 		{
 			get{return Stock;}
 			set{Stock=value;}
+		}
+		public int Tamaño
+		{
+			get{ return codigo.Length*2+Nombre.Length*2+marca.Length*2+Nom_Proveedor.Length*2+Precio_Min.Length*2+Precio_May.Length*2+Stock.Length*2+8;}
 		}
 		
 }

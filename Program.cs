@@ -1,12 +1,4 @@
-﻿/*
- * Creado por SharpDevelop.
- * Usuario: gymena
- * Fecha: 13/09/2016
- * Hora: 22:57
- * 
- * Para cambiar esta plantilla use Herramientas | Opciones | Codificación | Editar Encabezados Estándar
- */
-using System;
+﻿using System;
 
 namespace EJE7
 {
@@ -14,11 +6,14 @@ namespace EJE7
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine("HOLA GENTE!");
-			
-			//Ahora si estamos bien!!
-			Console.Write("Seguir programando . . . ");
-			Console.ReadKey(true);
+		   
+		 Console.ReadKey(true);
 		}
 	}
 }
+/*
+ con respecto al ejercicio pensaba que el almacen o donde esten los articulos sea el Main principal o tambien puede ser otra clase  que maneje el fichero
+que encapsule un flujo vinculado con unfichero y
+ muestre una interfaz que permite al ABM de los productos. La clase objeto Articulo encapsulara codigo, nombre, marca..etc ylas propiedades publicas 
+que forman parte de la intefaz de esta clase de objeto.
+ */
