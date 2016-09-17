@@ -10,3 +10,9 @@ C:\Users\oscar\Documents\GitHub\Actividad\obj\Debug\EJE7.pdb
 C:\Users\oscar\Documents\GitHub\Actividad\bin\Debug\EJE7.exe.config
 C:\Users\oscar\Documents\GitHub\Actividad\bin\Debug\EJE7.exe
 C:\Users\oscar\Documents\GitHub\Actividad\bin\Debug\EJE7.pdb
+C:\Users\gymena\Documents\GitHub\Actividad\bin\Debug\EJE7.exe.config
+C:\Users\gymena\Documents\GitHub\Actividad\bin\Debug\EJE7.exe
+C:\Users\gymena\Documents\GitHub\Actividad\bin\Debug\EJE7.pdb
+C:\Users\gymena\Documents\GitHub\Actividad\obj\Debug\EJE7.csprojResolveAssemblyReference.cache
+C:\Users\gymena\Documents\GitHub\Actividad\obj\Debug\EJE7.exe
+C:\Users\gymena\Documents\GitHub\Actividad\obj\Debug\EJE7.pdb

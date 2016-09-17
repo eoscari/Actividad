@@ -21,8 +21,15 @@ namespace EJE7
 		private int nregs;
 //		private bool regsEliminado=false;
 //		private bool regsModificado=false;
+		//Articulo articulo;
+		//StreamWriter archivo;
 		
 		//CONSTRUCTOR
+		public CListaArt()
+		{
+			
+		}
+		
 		public CListaArt(string fichero, char respuesta)
 		{  
 		    respuesta ='S';
@@ -32,6 +39,27 @@ namespace EJE7
 				respuesta=char.Parse(Console.ReadLine());}
 		 	else {fs= new FileStream(fichero, FileMode.CreateNew, FileAccess.ReadWrite);}
 		}
+		
+	//	public String execute() 
+	//	{
+	//		//openFile();
+	//		return "success";
+	//	}
+		
+		//public void CreaArchivo(string r) 
+		//{
+		//	archivo=new StreamWriter(r+".txt");
+		//}
+		
+		//public void AbreAchivo(string n)
+		//{
+		//	archivo=File.AppendText(n+".txt");
+		//}
+		//public StreamWriter getArchivo()
+		//{
+		//	return archivo;
+		//}
+		
 		
 		public void Alta(string fi) {
 			string cadena;
@@ -57,5 +85,14 @@ namespace EJE7
 			nregs++;
 			if (sw!=null)sw.Close();
 		}
+		
+		public String PasarLinea(Articulo arti)
+		{
+			String l = "";
+			l=l+arti.SGCodigo+"-"+arti.SGNombre+"-"+arti.SGMarca+"-"+arti.SGNom_Provee+"-";
+			l=l+arti.SGMinorista+"-"+arti.SGMayorista+"-"+arti.SGStock;
+			return l;
+		}
+	
 	}
 }
