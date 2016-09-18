@@ -24,13 +24,44 @@ namespace EJE7
 		static string[] campos = new string[7];
 //		private bool regsEliminado=false;
 //		private bool regsModificado=false;
+		//Articulo articulo;
+		//StreamWriter archivo;
 		
 		//CONSTRUCTOR
 		public CListaArt()
+<<<<<<< HEAD
+=======
+		{
+			
+		}
+		
+		public CListaArt(string fichero, char respuesta)
+>>>>>>> origin/master
 		{  
 			escritura = File.AppendText(@"articulos.txt");
 			escritura.Close();
 		}
+		
+	//	public String execute() 
+	//	{
+	//		//openFile();
+	//		return "success";
+	//	}
+		
+		//public void CreaArchivo(string r) 
+		//{
+		//	archivo=new StreamWriter(r+".txt");
+		//}
+		
+		//public void AbreAchivo(string n)
+		//{
+		//	archivo=File.AppendText(n+".txt");
+		//}
+		//public StreamWriter getArchivo()
+		//{
+		//	return archivo;
+		//}
+		
 		
 		public void Alta(string fi) {
 			string cadena;
@@ -57,6 +88,7 @@ namespace EJE7
 			if (sw!=null)sw.Close();
 		}
 		
+<<<<<<< HEAD
 		public void crearArchivo(){
 			escritura = File.AppendText("articulos.txt");
 			escritura.Close();
@@ -409,5 +441,15 @@ namespace EJE7
 				lectura.Close();		
 			}
 		}
+=======
+		public String PasarLinea(Articulo arti)
+		{
+			String l = "";
+			l=l+arti.SGCodigo+"-"+arti.SGNombre+"-"+arti.SGMarca+"-"+arti.SGNom_Provee+"-";
+			l=l+arti.SGMinorista+"-"+arti.SGMayorista+"-"+arti.SGStock;
+			return l;
+		}
+	
+>>>>>>> origin/master
 	}
 }
