@@ -29,14 +29,6 @@ namespace EJE7
 		
 		//CONSTRUCTOR
 		public CListaArt()
-<<<<<<< HEAD
-=======
-		{
-			
-		}
-		
-		public CListaArt(string fichero, char respuesta)
->>>>>>> origin/master
 		{  
 			escritura = File.AppendText(@"articulos.txt");
 			escritura.Close();
@@ -88,7 +80,6 @@ namespace EJE7
 			if (sw!=null)sw.Close();
 		}
 		
-<<<<<<< HEAD
 		public void crearArchivo(){
 			escritura = File.AppendText("articulos.txt");
 			escritura.Close();
@@ -441,7 +432,7 @@ namespace EJE7
 				lectura.Close();		
 			}
 		}
-=======
+		
 		public String PasarLinea(Articulo arti)
 		{
 			String l = "";
@@ -450,6 +441,5 @@ namespace EJE7
 			return l;
 		}
 	
->>>>>>> origin/master
 	}
 }
