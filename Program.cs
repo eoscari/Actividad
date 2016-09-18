@@ -1,42 +1,68 @@
 ﻿using System;
+using System.IO;
 
 namespace EJE7
 {
 	class Program
 	{
-			
+				
 		public static void Main(string[] args)
 		{ 
-			int opcion = 0;
-			char resp='S';
-			
-			
-			Console.Title= "Trabajando con Ficheros";
-			Console.ForegroundColor = ConsoleColor.DarkGreen;
-			Console.Write("INGRESE EL NOMBRE EL FICHERO : ");
-			string nombre = Console.ReadLine();
-			//aqui le quiero pasar la ruta
-<<<<<<< HEAD
-			nombre="C:\\"+nombre+".txt";
-=======
-			nombre="A:\\"+nombre+".txt";
->>>>>>> origin/master
-			CListaArt LA= new CListaArt(nombre,resp);
-			//controlar que "resp" este en mayuscula
-			if (resp=='S'){
-			Console.WriteLine("*********MENU DE ARTICULOS**********");
-			Console.WriteLine("1. Añadir ");
-			Console.WriteLine("2. Eliminar ");
-			Console.WriteLine("3. Modificar ");
-			Console.WriteLine("4. Buscar ");
-			Console.WriteLine("5. Salir");
-			Console.Write("Opcion : ");
-			opcion = int.Parse(Console.ReadLine());
-			if (opcion==1) LA.Alta(nombre);
-			//switch
-			}
-		 Console.ReadKey(true);
-			}
+			CListaArt archivo = new CListaArt();
+			Console.ForegroundColor = ConsoleColor.Red;
+			byte opcion;
+			opcion = 0;
+			do{
+				try{
+					Console.WriteLine("Menú de opciones");
+					Console.WriteLine("1. Altas");
+					Console.WriteLine("2. Bajas");
+					Console.WriteLine("3. Modificación");
+					Console.WriteLine("4. Consultas");
+					Console.WriteLine("5. Ver todos los registros");
+					Console.WriteLine("6. Salir");
+					Console.Write("Qué deseas hacer?...");
+					opcion = Convert.ToByte(Console.ReadLine());
+					switch(opcion){
+						case 1:
+							//archivo = new CListaArt();
+							archivo.altas();
+							break;
+						case 2:
+							archivo.bajas();
+							break;
+						case 3:
+							archivo.modificar();
+							break;
+						case 4:
+							archivo.consultar();
+							break;
+						case 5:
+							archivo.consultagral();
+							break;
+						case 6:
+							Console.WriteLine("****************************");
+							Console.WriteLine("*** Saliendo del sistema ***");
+							Console.WriteLine("****************************");
+							break;
+						default:
+							Console.WriteLine("*************************");
+							Console.WriteLine("*** Opción incorrecta ***");
+							Console.WriteLine("*************************");
+							break;
+				}
+				}catch(FormatException fe){
+					Console.WriteLine("*************************");
+					Console.WriteLine("Error!! " + fe.Message);
+					Console.WriteLine("*************************");
+				} catch(Exception e){
+					Console.WriteLine("*************************");
+					Console.WriteLine("Error!! " + e.Message);
+					Console.WriteLine("*************************");
+				}
+			}while(opcion!=6);
+			Console.ReadKey(true);
+		}
 	}
 }
 /*
