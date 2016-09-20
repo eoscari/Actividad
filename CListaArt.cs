@@ -86,15 +86,17 @@ namespace EJE7
 		}   
 		
 		public void altas(){
-			encontrado = false;
+			
 			try{
+				respuesta = "SI";
+			while(respuesta=="SI"){
+				encontrado = false;	
 				lectura = File.OpenText("articulos.txt");
 				Console.Write("Ingrese el número de código del artículo: ");
 				codigo = Console.ReadLine();
 				cadena = lectura.ReadLine();
 				//Buscamos para ver si no existe un código igual
-				respuesta = "SI";
-			while(respuesta=="SI"){
+				
 				while(cadena != null){
 					campos = cadena.Split('-');
 					if(campos[0].Trim().Equals(codigo)){
@@ -141,13 +143,13 @@ namespace EJE7
 					Console.WriteLine("Desea Ingresa otro codigo?(SI/NO): "); 
 					respuesta=Console.ReadLine();
 					respuesta= respuesta.ToUpper();
-					if (respuesta.Equals("SI")){
-						         lectura = File.OpenText("articulos.txt");
-						         Console.Write("Ingrese el nuevo código del artículo: ");
-				                 codigo = Console.ReadLine();
-				                 cadena = lectura.ReadLine();
-				                 }}
-				}
+//					if (respuesta.Equals("SI")){
+//						         lectura = File.OpenText("articulos.txt");
+//						         Console.Write("Ingrese el nuevo código del artículo: ");
+//				                 codigo = Console.ReadLine();
+//				                 cadena = lectura.ReadLine();
+//				                 }}
+				}}
 				escritura.Close();
 			}catch(FileNotFoundException fn){
 				Console.WriteLine("*************************");
@@ -329,6 +331,16 @@ namespace EJE7
 									temporal.WriteLine(campos[0] + "- "+nuevoNombre+ "-"+campos[2]+"-"+campos[3]+"-"+campos[4]+"-"+campos[5]+"-"+campos[6]);
 									Console.WriteLine("*****************************************");
 									Console.WriteLine("*** Registro modificado correctamente ***");
+									Console.WriteLine();
+									Console.WriteLine();
+				       		        Console.WriteLine("Codigo : " + campos[0].Trim());
+					              	Console.WriteLine("Nombre : " + nuevoNombre);
+					            	Console.WriteLine("Marca : " + campos[2].Trim());
+					    	        Console.WriteLine("Proveedor : " + campos[3].Trim());
+						            Console.WriteLine("Precio Mínimo : " + campos[4].Trim());
+						            Console.WriteLine("Precio Máximo : " + campos[5].Trim());
+					             	Console.WriteLine("Stock : " + campos[6].Trim());
+						            Console.WriteLine();
 									Console.WriteLine("*****************************************");
 									break;
 								case 2:
@@ -338,6 +350,15 @@ namespace EJE7
 									temporal.WriteLine(campos[0] + "- "+campos[1]+ "-"+nuevaMarca+"-"+campos[3]+"-"+campos[4]+"-"+campos[5]+"-"+campos[6]);
 									Console.WriteLine("*****************************************");
 									Console.WriteLine("*** Registro modificado correctamente ***");
+									Console.WriteLine();
+				       		        Console.WriteLine("Codigo : " + campos[0].Trim());
+					              	Console.WriteLine("Nombre : " + campos[1].Trim());
+					            	Console.WriteLine("Marca : " + nuevaMarca);
+					    	        Console.WriteLine("Proveedor : " + campos[3].Trim());
+						            Console.WriteLine("Precio Mínimo : " + campos[4].Trim());
+						            Console.WriteLine("Precio Máximo : " + campos[5].Trim());
+					             	Console.WriteLine("Stock : " + campos[6].Trim());
+						            Console.WriteLine();
 									Console.WriteLine("*****************************************");
 									break;
 								case 3:
@@ -347,6 +368,15 @@ namespace EJE7
 									temporal.WriteLine(campos[0] + "- "+campos[1]+ "-"+campos[2]+"-"+nuevoProv+"-"+campos[4]+"-"+campos[5]+"-"+campos[6]);
 									Console.WriteLine("*****************************************");
 									Console.WriteLine("*** Registro modificado correctamente ***");
+									Console.WriteLine();
+				       		        Console.WriteLine("Codigo : " + campos[0].Trim());
+					              	Console.WriteLine("Nombre : " + campos[1].Trim());
+					            	Console.WriteLine("Marca : " + campos[2].Trim());
+					    	        Console.WriteLine("Proveedor : " + nuevoProv);
+						            Console.WriteLine("Precio Mínimo : " + campos[4].Trim());
+						            Console.WriteLine("Precio Máximo : " + campos[5].Trim());
+					             	Console.WriteLine("Stock : " + campos[6].Trim());
+						            Console.WriteLine();
 									Console.WriteLine("*****************************************");
 									break;
 								case 4:
@@ -355,6 +385,15 @@ namespace EJE7
 									temporal.WriteLine(campos[0] + "- "+campos[1]+ "-"+campos[2]+"-"+campos[3]+"-"+nuevoPremin+"-"+campos[5]+"-"+campos[6]);
 									Console.WriteLine("*****************************************");
 									Console.WriteLine("*** Registro modificado correctamente ***");
+									Console.WriteLine();
+				       		        Console.WriteLine("Codigo : " + campos[0].Trim());
+					              	Console.WriteLine("Nombre : " + campos[1].Trim());
+					            	Console.WriteLine("Marca : " + campos[2].Trim());
+					    	        Console.WriteLine("Proveedor : " + campos[3].Trim());
+						            Console.WriteLine("Precio Mínimo : " + nuevoPremin);
+						            Console.WriteLine("Precio Máximo : " + campos[5].Trim());
+					             	Console.WriteLine("Stock : " + campos[6].Trim());
+						            Console.WriteLine();
 									Console.WriteLine("*****************************************");
 									break;
 								case 5:
@@ -363,6 +402,15 @@ namespace EJE7
 									temporal.WriteLine(campos[0] + "- "+campos[1]+ "-"+campos[2]+"-"+campos[3]+"-"+campos[4]+"-"+nuevoPremax+"-"+campos[6]);
 									Console.WriteLine("*****************************************");
 									Console.WriteLine("*** Registro modificado correctamente ***");
+									Console.WriteLine();
+				       		        Console.WriteLine("Codigo : " + campos[0].Trim());
+					              	Console.WriteLine("Nombre : " + campos[1].Trim());
+					            	Console.WriteLine("Marca : " + campos[2].Trim());
+					    	        Console.WriteLine("Proveedor : " + campos[3].Trim());
+						            Console.WriteLine("Precio Mínimo : " + campos[4].Trim());
+						            Console.WriteLine("Precio Máximo : " + nuevoPremax);
+					             	Console.WriteLine("Stock : " + campos[6].Trim());
+						            Console.WriteLine();
 									Console.WriteLine("*****************************************");
 									break;
 								case 6:
@@ -371,6 +419,15 @@ namespace EJE7
 									temporal.WriteLine(campos[0] + "- "+campos[1]+ "-"+campos[2]+"-"+campos[3]+"-"+campos[4]+"-"+campos[5]+"-"+nuevoStok);
 									Console.WriteLine("*****************************************");
 									Console.WriteLine("*** Registro modificado correctamente ***");
+									Console.WriteLine();
+				       		        Console.WriteLine("Codigo : " + campos[0].Trim());
+					              	Console.WriteLine("Nombre : " + campos[1].Trim());
+					            	Console.WriteLine("Marca : " + campos[2].Trim());
+					    	        Console.WriteLine("Proveedor : " + campos[3].Trim());
+						            Console.WriteLine("Precio Mínimo : " + campos[4].Trim());
+						            Console.WriteLine("Precio Máximo : " + campos[5].Trim());
+					             	Console.WriteLine("Stock : " + nuevoStok);
+						            Console.WriteLine();
 									Console.WriteLine("*****************************************");
 									break;
 								default:
