@@ -16,3 +16,9 @@ C:\Users\gymena\Documents\GitHub\Actividad\bin\Debug\EJE7.pdb
 C:\Users\gymena\Documents\GitHub\Actividad\obj\Debug\EJE7.csprojResolveAssemblyReference.cache
 C:\Users\gymena\Documents\GitHub\Actividad\obj\Debug\EJE7.exe
 C:\Users\gymena\Documents\GitHub\Actividad\obj\Debug\EJE7.pdb
+C:\Users\casa\Documents\GitHub\Actividad\bin\Debug\EJE7.exe.config
+C:\Users\casa\Documents\GitHub\Actividad\bin\Debug\EJE7.exe
+C:\Users\casa\Documents\GitHub\Actividad\bin\Debug\EJE7.pdb
+C:\Users\casa\Documents\GitHub\Actividad\obj\Debug\EJE7.csprojResolveAssemblyReference.cache
+C:\Users\casa\Documents\GitHub\Actividad\obj\Debug\EJE7.exe
+C:\Users\casa\Documents\GitHub\Actividad\obj\Debug\EJE7.pdb

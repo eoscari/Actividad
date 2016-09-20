@@ -13,7 +13,7 @@ namespace EJE7
 {
 	public class CListaArt
 	{//ATRIBUTOS
-    	private FileStream fs;  
+    	//private FileStream fs;  
 		private StreamReader lectura;
 		private StreamWriter sw, escritura, temporal;
 //		private BinaryReader br;
@@ -83,7 +83,7 @@ namespace EJE7
 		public void crearArchivo(){
 			escritura = File.AppendText("articulos.txt");
 			escritura.Close();
-		}
+		}   
 		
 		public void altas(){
 			encontrado = false;
@@ -93,6 +93,8 @@ namespace EJE7
 				codigo = Console.ReadLine();
 				cadena = lectura.ReadLine();
 				//Buscamos para ver si no existe un código igual
+				respuesta = "SI";
+			while(respuesta=="SI"){
 				while(cadena != null){
 					campos = cadena.Split('-');
 					if(campos[0].Trim().Equals(codigo)){
@@ -116,7 +118,14 @@ namespace EJE7
 					Console.Write("Precio Minimo del Art.: ");
 					double PreMin= Convert.ToDouble(Console.ReadLine());
 					Console.Write("Precio Maximo del Art.: ");
-					double PreMay=Convert.ToDouble(Console.ReadLine());					
+					double PreMay=Convert.ToDouble(Console.ReadLine());	
+					
+					while(PreMay<PreMin){
+						Console.WriteLine("*****************************");
+						Console.WriteLine("El precio Maximo del Articulo esta por debajo del precio Minimo");
+						Console.WriteLine("ingrese un precio mayor a "+PreMin);
+						PreMay=Convert.ToDouble(Console.ReadLine());
+					}
 					Console.Write("Stock: ");
 					int sto=int.Parse(Console.ReadLine());					
 					//Escribiendo los datos en el archivo
@@ -125,9 +134,19 @@ namespace EJE7
 					Console.WriteLine("Registro agregado correctamente");
 					Console.WriteLine("*******************************");	
 				}else{
+					escritura.Close();
 					Console.WriteLine("*************************************");
-					Console.WriteLine("Ya existe un artículo con ese código " + codigo);
+					Console.WriteLine("Ya existe un artículo con el código " + codigo);
 					Console.WriteLine("*************************************");
+					Console.WriteLine("Desea Ingresa otro codigo?(SI/NO): "); 
+					respuesta=Console.ReadLine();
+					respuesta= respuesta.ToUpper();
+					if (respuesta.Equals("SI")){
+						         lectura = File.OpenText("articulos.txt");
+						         Console.Write("Ingrese el nuevo código del artículo: ");
+				                 codigo = Console.ReadLine();
+				                 cadena = lectura.ReadLine();
+				                 }}
 				}
 				escritura.Close();
 			}catch(FileNotFoundException fn){

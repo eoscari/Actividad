@@ -7,10 +7,11 @@ namespace EJE7
 	class Program
 	{
 				
-		public static void Main(string[] args)
+		public static void Main(string[] args)	
 		{ 
+			Console.Title= "Trabajando con Ficheros";
 			CListaArt archivo = new CListaArt();
-			Console.ForegroundColor = ConsoleColor.Red;
+			Console.ForegroundColor = ConsoleColor.Green;
 			byte opcion;
 			opcion = 0;
 			do{
@@ -26,7 +27,6 @@ namespace EJE7
 					opcion = Convert.ToByte(Console.ReadLine());
 					switch(opcion){
 						case 1:
-							//archivo = new CListaArt();
 							archivo.altas();
 							break;
 						case 2:
